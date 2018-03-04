@@ -74,3 +74,20 @@ sudo mv synchronization-software /opt/recording
 * Create a directory "data" in /opt/recording
 * Restart the system
 
+### Configure Equil software
+Open Equil.sh in /opt/recording/scripts/ and modify as needed:
+```bash
+JAVA_HOME: Location JAVA JRE
+EXEC: Location JSVC
+```
+### Installation of ICS43432 driver
+Use this post: [Add an I2S mic using device tree & simple-audio-card](https://www.raspberrypi.org/forums/viewtopic.php?f=44&t=173640) to install the driver for the ICS43432 digital microphones.
+
+### Configure web server Lighttpd
+The web server [Lighttpd](https://www.lighttpd.net/) is necessary to extract all recorded software. To install first remove Apache httpd if installed, then install **lighthttpd** from the official repositoty and enable the service:
+```bash
+sudo apt-get remove apache2
+sudo apt-get install lighttpd
+sudo systemctl enable lighttpd.service
+```
+
