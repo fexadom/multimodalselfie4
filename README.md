@@ -54,4 +54,23 @@ The Equil driver for the SmartPen2 requires Java, to install:
 sudo apt-get install jsvc
 ```
 ## Configuration Notes
+To use the camera port it is necessary to enable it at boot time, run:
+```bash
+sudo raspi-config
+```
+and enable the camera. To map the camera driver to /dev/video0 add this line to /etc/rc.local:
+```bash
+modprobe bcm2835-v4l2
+```
+### Installation of synchronization software
+Install the contents of the [synchronization software](/synchronization-software) in the folder /opt/recording:
+```bash
+git clone https://github.com/fexadom/multimodalselfie4.git
+cd multimodalselfie4
+sudo mv synchronization-software /opt/recording
+```
+* Copy /opt/recording/node-red/settings.js to ~/.node-red/
+* Copy the directory /opt/recording/node-red/node_modules/file-exists to ~/.node-red/node_modules/
+* Create a directory "data" in /opt/recording
+* Restart the system
 
