@@ -23,18 +23,18 @@ It uses the following scripts:
 This project should be installed in the following directory on the device:
 * /opt/recording
 
-##Data
+## Data
 When recording it produces the following files in the data directory:
 * notas[timestamp].txt: xy data from the smart pen
 * output[timestamp].mkv: video/audio file from ffmpeg
 
 
-##Logs
+## Logs
 Logs are maintened in the logs directory:
 * node-red.log: Registers start/stop events and watchdog restart events
 * ffmpeg.log: stderr output of the ffmpeg process
 
-##Node-red
+## Node-red
 Node-red code is in the node-red directory:
 * flows_raspberrypi3.json: node-red flows
 * settings.js: expected settings file. Copy this file to the local node-red installation folder.
