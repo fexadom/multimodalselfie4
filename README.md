@@ -4,3 +4,8 @@ The MultimodalSelfie is a personal multimodal recording device designed for trad
 <img src="/images/concept.png" width="250" alt="Concept use of MultimodalSelfie">
 
 ## Design
+This repository contains all the necessary information to construct and test the fourth version of the MultimodalSelfie device (for short MMSv4). The MMSv4 is based on the [Raspberry Pi Zero W](https://www.raspberrypi.org/products/raspberry-pi-zero-w/) a stripped down version of the Raspberry Pi with wireless connectivity.
+
+Front View | Components | Functionality
+--- | --- | ---
+<img src="/images/multimodalselfiev4_front.JPG" width="250" alt="MMSv4 Front"> | <img src="/images/Multimodal_working_battery.PNG" width="450" alt="MMSv4 Components"> | <img src="/images/multimodalselfiev4_components.png" width="375" alt="MMSv4 Functionality">
