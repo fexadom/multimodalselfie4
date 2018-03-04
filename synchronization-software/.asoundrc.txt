@@ -1,0 +1,27 @@
+pcm.mic_hw{
+   type hw
+   card memsmic
+   channels 2
+   format S32_LE
+}
+pcm.mic_mm{
+   type mmap_emul
+   slave.pcm mic_hw
+}
+pcm.mic_sv{
+   type softvol
+   slave.pcm mic_mm
+   control {
+      name "Boost Capture Volume"
+      card memsmic
+   }
+   min_dB -3.0
+   max_dB 50.0
+}
+pcm.mic_mono{
+   type multi
+   slaves.a.pcm mic_sv
+   slaves.a.channels 2
+   bindings.0.slave.a
+   bindings.a.channel 0
+}
