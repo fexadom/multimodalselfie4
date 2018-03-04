@@ -27,3 +27,31 @@ LiPo battery  | 2000mAh Lithium Ion battery | [Manufacturer website](https://www
 ### Software components
 The operating system used is [Raspbian Stretch Lite](https://www.raspberrypi.org/downloads/raspbian/) (Release date 2017-11-29). Video and audio are captured and synchronized using **ffmpeg** and overall synchronization is done with Node-Red:
 * [Node-Red flows](/synchronization-software)
+
+## Dependencies
+After installing Raspbian Stretch Lite (avoid installing any GUI and unnecessary packages) update as needed with:
+```bash
+sudo apt-get update
+sudo apt-get upgrade
+```
+then install the following dependencies:
+
+### ffmpeg
+For best results, install ffmpeg and its dependencies from the official repository:
+```bash
+sudo apt-get install ffmpeg
+```
+
+### Node-RED
+Node-RED is pre-installed in Raspbian Stretch, to enable it:
+```bash
+sudo systemctl enable nodered.service
+```
+
+### Equil
+The Equil driver for the SmartPen2 requires Java, to install:
+```bash
+sudo apt-get install jsvc
+```
+## Configuration Notes
+
